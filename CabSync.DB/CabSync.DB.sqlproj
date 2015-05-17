@@ -62,7 +62,7 @@
     <Recovery>FULL</Recovery>
     <EnableFullTextSearch>False</EnableFullTextSearch>
     <CreateProjectFromDatabaseCompleted>True</CreateProjectFromDatabaseCompleted>
-    <GenerateCreateScript>True</GenerateCreateScript>
+    <GenerateCreateScript>False</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -86,6 +86,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatTSqlWarningsAsErrors>True</TreatTSqlWarningsAsErrors>
   </PropertyGroup>
   <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
   <PropertyGroup>

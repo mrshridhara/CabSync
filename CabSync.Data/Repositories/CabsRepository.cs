@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Simple.Data;
+using System;
 using System.Collections.Generic;
 
 namespace CabSync.Data.Repositories
 {
-    class CabsRepository : IRepository<Cab>
+    public sealed class CabsRepository : IRepository<Cab>
     {
         public void Create(Cab entiry)
         {
@@ -17,7 +18,8 @@ namespace CabSync.Data.Repositories
 
         public IEnumerable<Cab> Read()
         {
-            throw new NotImplementedException();
+            var db = Database.Open();
+            return db.Cabs.All();
         }
 
         public void Update(Cab entiry)

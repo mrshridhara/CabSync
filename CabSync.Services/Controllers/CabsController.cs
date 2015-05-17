@@ -1,9 +1,18 @@
-﻿using System.Web.Http;
+﻿using CabSync.Data;
+using CabSync.Data.Repositories;
+using System.Web.Http;
 
 namespace CabSync.Services.Controllers
 {
     public class CabsController : ApiController
     {
-        public IHttpActionResult Get() => Ok(new { Message = $"Reached get method in {nameof(CabsController)}" });
+        private readonly IRepository<Cab> cabRepository;
+
+        public CabsController()
+        {
+            cabRepository = new CabsRepository();
+        }
+
+        public IHttpActionResult Get() => Ok(cabRepository.Read());
     }
 }
