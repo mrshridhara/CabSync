@@ -4,7 +4,7 @@
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseName>cabsync_db</TargetDatabaseName>
     <DeployScriptFileName>cabsync_db.sql</DeployScriptFileName>
-    <TargetConnectionString>Data Source=bf7om8jdzs.database.windows.net,1433;Persist Security Info=True;User ID=cabsync@bf7om8jdzs;Pooling=False</TargetConnectionString>
+    <TargetConnectionString>Data Source=bf7om8jdzs.database.windows.net,1433;Persist Security Info=True;User ID=cabsync;Pooling=False</TargetConnectionString>
     <ProfileVersionNumber>1</ProfileVersionNumber>
   </PropertyGroup>
 </Project>

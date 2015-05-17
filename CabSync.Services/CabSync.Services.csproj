@@ -104,6 +104,16 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CabSync.Data\CabSync.Data.csproj">
+      <Project>{2d49144f-126a-4071-88a3-7af59ced77f2}</Project>
+      <Name>CabSync.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CabSync.DB\CabSync.DB.sqlproj">
+      <Project>{8bbd7b1e-25d1-470f-bad3-dcf01a57c80f}</Project>
+      <Name>CabSync.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

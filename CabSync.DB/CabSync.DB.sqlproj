@@ -62,6 +62,7 @@
     <Recovery>FULL</Recovery>
     <EnableFullTextSearch>False</EnableFullTextSearch>
     <CreateProjectFromDatabaseCompleted>True</CreateProjectFromDatabaseCompleted>
+    <GenerateCreateScript>True</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -96,8 +97,19 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CabSync.DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\RequestDays.sql" />
+    <Build Include="Tables\Requesters.sql" />
+    <Build Include="Tables\PointOfInterests.sql" />
+    <Build Include="Tables\Cabs.sql" />
+    <Build Include="Tables\Drivers.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="CabSync.DB.refactorlog" />
   </ItemGroup>
 </Project>

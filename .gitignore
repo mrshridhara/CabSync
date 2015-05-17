@@ -52,5 +52,4 @@ Thumbs.db
 #Others
 Simon/Simon.UI.Web/Data
 .vs/
-
-#EoF
+*.dbmdl
