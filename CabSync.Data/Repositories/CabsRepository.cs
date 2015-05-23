@@ -6,7 +6,7 @@ namespace CabSync.Data.Repositories
 {
     public sealed class CabsRepository : IRepository<Cab>
     {
-        public void Create(Cab entiry)
+        public Cab Create(Cab entiry)
         {
             throw new NotImplementedException();
         }

@@ -5,7 +5,7 @@ namespace CabSync.Data.Repositories
 {
     public sealed class DriversRepository : IRepository<Driver>
     {
-        public void Create(Driver entiry)
+        public Driver Create(Driver entiry)
         {
             throw new NotImplementedException();
         }

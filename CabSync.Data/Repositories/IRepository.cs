@@ -4,7 +4,7 @@ namespace CabSync.Data.Repositories
 {
     public interface IRepository<TEntity>
     {
-        void Create(TEntity entiry);
+        TEntity Create(TEntity entiry);
 
         void Delete(int entityId);
 

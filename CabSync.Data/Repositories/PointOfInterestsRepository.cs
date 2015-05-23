@@ -5,7 +5,7 @@ namespace CabSync.Data.Repositories
 {
     public sealed class PointOfInterestsRepository : IRepository<PointOfInterest>
     {
-        public void Create(PointOfInterest entiry)
+        public PointOfInterest Create(PointOfInterest entiry)
         {
             throw new NotImplementedException();
         }

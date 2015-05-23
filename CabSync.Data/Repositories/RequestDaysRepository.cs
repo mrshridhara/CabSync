@@ -5,7 +5,7 @@ namespace CabSync.Data.Repositories
 {
     public sealed class RequestDaysRepository : IRepository<RequestDay>
     {
-        public void Create(RequestDay entiry)
+        public RequestDay Create(RequestDay entiry)
         {
             throw new NotImplementedException();
         }

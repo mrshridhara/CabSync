@@ -45,7 +45,7 @@ namespace CabSync.Services.Controllers
             return Ok(matchingTrip);
         }
 
-        [Route("{date}/users/{userId}")]
+        [Route("{date}/requesters/{userId}")]
         public IHttpActionResult GetByStartDateAndRequesterUserId(string date, string userId)
         {
             var matchingTrip =
@@ -63,6 +63,12 @@ namespace CabSync.Services.Controllers
         {
             if ("Today".Equals(dateTimeString, StringComparison.OrdinalIgnoreCase))
                 return DateTime.Today;
+
+            if ("Tomorrow".Equals(dateTimeString, StringComparison.OrdinalIgnoreCase))
+                return DateTime.Today.AddDays(1);
+
+            if ("Yesterday".Equals(dateTimeString, StringComparison.OrdinalIgnoreCase))
+                return DateTime.Today.AddDays(-1);
 
             DateTime dateTime;
             DateTime.TryParse(dateTimeString, out dateTime);

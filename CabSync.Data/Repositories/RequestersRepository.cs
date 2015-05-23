@@ -5,7 +5,7 @@ namespace CabSync.Data.Repositories
 {
     public sealed class RequestersRepository : IRepository<Requester>
     {
-        public void Create(Requester entiry)
+        public Requester Create(Requester entiry)
         {
             throw new NotImplementedException();
         }
