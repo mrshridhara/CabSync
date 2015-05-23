@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[TripsRequesters]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [TripId] INT NOT NULL, 
     [RequesterId] INT NOT NULL, 
     CONSTRAINT [FK_TripsRequesters_ToTrips] FOREIGN KEY ([TripId]) REFERENCES [Trips]([Id]), 

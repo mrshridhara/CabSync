@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Requesters]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [FirstName] NVARCHAR(50) NULL,
 	[LastName] NVARCHAR(50) NULL, 
     [PhoneNo] NVARCHAR(10) NULL, 

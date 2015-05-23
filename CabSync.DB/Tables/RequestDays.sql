@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[RequestDays]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [RequesterId] INT NOT NULL, 
     [DayOfWeek] NVARCHAR(12) NULL, 
     [LoginTime] TIME NULL, 

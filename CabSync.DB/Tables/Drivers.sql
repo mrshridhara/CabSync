@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Drivers]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Name] NVARCHAR(100) NULL, 
     [PhoneNo] NVARCHAR(10) NULL
 )

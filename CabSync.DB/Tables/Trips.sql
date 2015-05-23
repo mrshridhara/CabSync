@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Trips]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [CabId] INT NULL, 
     [StartDateTime] DATETIME NULL, 
     [EndDateTime] DATETIME NULL, 

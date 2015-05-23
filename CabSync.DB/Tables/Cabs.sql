@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Cabs]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [RegistrationNumber] NVARCHAR(12) NULL, 
     [DriverId] INT NULL, 
     [DepotLocationId] INT NULL, 
