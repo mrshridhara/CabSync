@@ -5,7 +5,8 @@ using System.Web.Http;
 
 namespace CabSync.Services.Controllers
 {
-    public class CabsController : ApiController
+    [RoutePrefix("api/cabs")]
+    public sealed class CabsController : ApiController
     {
         private readonly IRepository<Cab> cabRepository;
 
@@ -14,14 +15,16 @@ namespace CabSync.Services.Controllers
             cabRepository = new CabsRepository();
         }
 
+        [Route]
         public IHttpActionResult Get() => Ok(cabRepository.Read());
 
+        [Route("{registrationNumber}")]
         public IHttpActionResult GetByRegistrationNumber(string registrationNumber)
         {
             var matchingCab =
                 cabRepository
                     .Read()
-                    .FirstOrDefault(each => each.Equals(new Cab { RegistrationNumber = registrationNumber }));
+                    .FirstOrDefault(each => each.RegistrationNumber == registrationNumber);
 
             if (default(Cab).Equals(matchingCab))
                 return NotFound();

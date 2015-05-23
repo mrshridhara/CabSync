@@ -109,6 +109,8 @@
     <Build Include="Tables\PointOfInterests.sql" />
     <Build Include="Tables\Cabs.sql" />
     <Build Include="Tables\Drivers.sql" />
+    <Build Include="Tables\Trips.sql" />
+    <Build Include="Tables\TripsRequesters.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="CabSync.DB.refactorlog" />

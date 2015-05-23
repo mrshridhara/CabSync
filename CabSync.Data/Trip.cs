@@ -7,11 +7,13 @@ namespace CabSync.Data
     {
         public Cab Cab { get; set; }
 
-        public DateTime EndDateTime { get; set; }
+        public DateTime? EndDateTime { get; set; }
+
+        public int Id { get; set; }
 
         public IEnumerable<Requester> Requesters { get; set; }
 
-        public DateTime StartDateTime { get; set; }
+        public DateTime? StartDateTime { get; set; }
 
         public TripType TripType { get; set; }
 

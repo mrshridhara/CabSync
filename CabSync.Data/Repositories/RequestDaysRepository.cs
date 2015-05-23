@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CabSync.Data.Repositories
 {
-    class RequestDaysRepository : IRepository<RequestDay>
+    public sealed class RequestDaysRepository : IRepository<RequestDay>
     {
         public void Create(RequestDay entiry)
         {

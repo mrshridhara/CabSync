@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CabSync.Data.Repositories
 {
-    class PointOfInterestsRepository : IRepository<PointOfInterest>
+    public sealed class PointOfInterestsRepository : IRepository<PointOfInterest>
     {
         public void Create(PointOfInterest entiry)
         {

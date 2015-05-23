@@ -41,6 +41,7 @@
     <Compile Include="Repositories\PointOfInterestsRepository.cs" />
     <Compile Include="Repositories\RequestDaysRepository.cs" />
     <Compile Include="Repositories\RequestersRepository.cs" />
+    <Compile Include="Repositories\TripsRepository.cs" />
     <Compile Include="RequestDay.cs" />
     <Compile Include="Requester.cs" />
     <Compile Include="Trip.cs" />

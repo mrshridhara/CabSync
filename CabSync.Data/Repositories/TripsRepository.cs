@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace CabSync.Data.Repositories
 {
-    public sealed class DriversRepository : IRepository<Driver>
+    public sealed class TripsRepository : IRepository<Trip>
     {
-        public void Create(Driver entiry)
+        public void Create(Trip entiry)
         {
             throw new NotImplementedException();
         }
@@ -15,12 +15,12 @@ namespace CabSync.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Driver> Read()
+        public IEnumerable<Trip> Read()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Driver entiry)
+        public void Update(Trip entiry)
         {
             throw new NotImplementedException();
         }
