@@ -43,6 +43,8 @@
     <Compile Include="Repositories\RequestersRepository.cs" />
     <Compile Include="RequestDay.cs" />
     <Compile Include="Requester.cs" />
+    <Compile Include="Trip.cs" />
+    <Compile Include="TripType.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CabSync.DB\CabSync.DB.sqlproj">

@@ -1,9 +1,24 @@
-﻿namespace CabSync.Data
+﻿using System;
+
+namespace CabSync.Data
 {
-    public struct PointOfInterest
+    public struct PointOfInterest : IEquatable<PointOfInterest>
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
         public string Coordinates { get; set; }
+
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj.GetType() != typeof(PointOfInterest))
+                return false;
+            return Equals((PointOfInterest)obj);
+        }
+
+        public bool Equals(PointOfInterest other) => Coordinates == other.Coordinates;
+
+        public override int GetHashCode() => Coordinates.GetHashCode();
     }
 }
