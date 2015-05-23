@@ -18,6 +18,10 @@ namespace CabSync.Data
 
         public string UserId { get; set; }
 
+        public static bool operator !=(Requester one, Requester other) => !one.Equals(other);
+
+        public static bool operator ==(Requester one, Requester other) => one.Equals(other);
+
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != typeof(Requester))

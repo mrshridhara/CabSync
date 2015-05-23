@@ -14,6 +14,10 @@ namespace CabSync.Data
 
         public Requester Requester { get; set; }
 
+        public static bool operator !=(RequestDay one, RequestDay other) => !one.Equals(other);
+
+        public static bool operator ==(RequestDay one, RequestDay other) => one.Equals(other);
+
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != typeof(RequestDay))

@@ -12,6 +12,10 @@ namespace CabSync.Data
 
         public string RegistrationNumber { get; set; }
 
+        public static bool operator !=(Cab one, Cab other) => !one.Equals(other);
+
+        public static bool operator ==(Cab one, Cab other) => one.Equals(other);
+
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != typeof(Cab))
@@ -19,8 +23,8 @@ namespace CabSync.Data
             return Equals((Cab)obj);
         }
 
-        public override int GetHashCode() => RegistrationNumber.GetHashCode();
-
         public bool Equals(Cab other) => RegistrationNumber == other.RegistrationNumber;
+
+        public override int GetHashCode() => RegistrationNumber.GetHashCode();
     }
 }

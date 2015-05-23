@@ -10,6 +10,10 @@ namespace CabSync.Data
 
         public string PhoneNo { get; set; }
 
+        public static bool operator !=(Driver one, Driver other) => !one.Equals(other);
+
+        public static bool operator ==(Driver one, Driver other) => one.Equals(other);
+
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != typeof(Driver))

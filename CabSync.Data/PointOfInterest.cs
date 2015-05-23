@@ -10,6 +10,10 @@ namespace CabSync.Data
 
         public string Name { get; set; }
 
+        public static bool operator !=(PointOfInterest one, PointOfInterest other) => !one.Equals(other);
+
+        public static bool operator ==(PointOfInterest one, PointOfInterest other) => one.Equals(other);
+
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != typeof(PointOfInterest))

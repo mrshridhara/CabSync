@@ -17,6 +17,10 @@ namespace CabSync.Data
 
         public TripType TripType { get; set; }
 
+        public static bool operator !=(Trip one, Trip other) => !one.Equals(other);
+
+        public static bool operator ==(Trip one, Trip other) => one.Equals(other);
+
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != typeof(Trip))
